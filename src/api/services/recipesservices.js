@@ -24,14 +24,14 @@ exports.ReadsingleRecipeService = (id) => {
     return new Promise ( (resolve, reject) =>{
         Recipe.findOne({_id: id})
         .then(recipe => resolve(recipe))
-        .catch(err => reject(err))
+        .catch(err => reject(err));
     });
 }
 
 exports.ReadRecipeService = new Promise ( (resolve, reject) =>{
         Recipe.find()
         .then(recipies => resolve(recipies))
-        .catch(err => reject(err))
+        .catch(err => reject(err));
 });
 
 exports.UpdateRecipeService = (id, body) => {
